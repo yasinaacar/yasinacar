@@ -1,0 +1,152 @@
+
+/* main-header/bg-image process */
+.main-header{
+    background-image: url(img/main-wp.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.main-header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6)
+
+}
+ .header-content{ /*resim içinde kullanıcağımız yazılar için işlemler */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    padding-left: 20px;
+    color: #fff;
+    height: 100%;
+}
+
+.header-content h1{ /* içeriğin başlık animasyonu */
+    letter-spacing: 10px;
+    padding-bottom: 10px;
+    animation: bounce 3s forwards ease-in;
+    
+}
+
+.header-content p{ /* içeriğin metin animasyonu */
+    font-size: 32px;
+    animation: backInLeft 2s;
+}
+
+
+
+/* navbar process */
+
+.navbar-brand{ /* logo alanındaki yazı için işlemler */
+    letter-spacing: 4px;
+    font-weight: 600;
+    font-family: 'Indie Flower';
+}
+
+.nav-item a:hover{
+    border-bottom: solid 2px #ffc107;
+}
+
+
+
+/* about-me process */
+
+.about-me .hakkimda {
+    letter-spacing: 5px;
+}
+
+.about-me p{
+    text-indent: 12px;
+}
+
+.about-me a {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color: gray;
+}
+
+
+
+/* about-me/link-icon process */
+
+.fa-envelope:hover,
+.fa-envelope:active{
+    color: #00B2FF;
+}
+
+.fa-instagram:hover,
+.fa-instagram:active{
+    color: #E1306C;
+}
+
+.fa-github:hover,
+.fa-github:active{
+    color: #833AB4;
+}
+
+.fa-linkedin:hover,
+.fa-linkedin:active{
+    color: #0e668c;
+}
+
+.fa-spotify:hover,
+.fa-spotify:active{
+    color: #1DB954;
+}
+
+.siparis .btn:hover{
+
+    background-color: rgb(64, 60, 60);
+    color: #ffc107;
+}
+
+
+
+/* talents/progress-bar process */
+
+.progress{
+    height: 7px;
+}
+.progress-bar{
+    background-color: #1ea44d;
+}
+
+.info h2{
+    border-bottom: solid 1px #FFD43B;
+
+}
+
+
+
+/* responsive process */
+
+@media (max-width:1000px) {
+
+    .navbar-contact{
+        display: none;
+    }
+    .navbar-brand{
+        padding-left: 10px;
+        display: block;
+    }
+    .navbar-toggler{
+        padding-right: 10px ;
+        display: block;
+        pointer-events: auto;
+    }
+
+}
+
